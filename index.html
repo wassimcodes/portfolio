@@ -1,0 +1,769 @@
+<!-- 
+  Hello 😊.
+
+  This template is designed and developed by Nisar Hassan Naqvi
+  for anyone to use for free or customize the way they like.
+
+  Github Repo: https://github.com/nisarhassan12/portfolio-template/
+  My Website: https://nisar.dev
+
+  For business & inquires, contact me => syednisarhassan12@gmail.com
+-->
+
+<!--
+  Follow the instructions written in comments to create your stunning portfolio
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Wassim Ouled Mohamed | Portfolio
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <div class="game-modal" id="game-modal" aria-hidden="true">
+    <div class="game-modal__backdrop" data-modal-close></div>
+    <div class="game-modal__panel" role="dialog" aria-modal="true" aria-labelledby="game-modal-title">
+      <img class="game-modal__cover" src="" alt="" />
+      <div class="game-modal__content">
+        <h3 class="game-modal__title" id="game-modal-title"></h3>
+        <div class="game-modal__field game-modal__field--description">
+          <span class="game-modal__label">Description:</span>
+          <span class="game-modal__value game-modal__description" data-modal-description></span>
+        </div>
+        <div class="game-modal__meta">
+          <div class="game-modal__field">
+            <span class="game-modal__label">Genre:</span>
+            <span class="game-modal__value" data-modal-genre></span>
+          </div>
+          <div class="game-modal__field">
+            <span class="game-modal__label">Team Size:</span>
+            <span class="game-modal__value" data-modal-team-size></span>
+          </div>
+          <div class="game-modal__field">
+            <span class="game-modal__label">Role:</span>
+            <span class="game-modal__value" data-modal-role></span>
+          </div>
+          <div class="game-modal__field">
+            <span class="game-modal__label">Development Time:</span>
+            <span class="game-modal__value" data-modal-devtime></span>
+          </div>
+          <div class="game-modal__field">
+            <span class="game-modal__label">Tools:</span>
+            <span class="game-modal__value" data-modal-tools></span>
+          </div>
+        </div>
+        <div class="game-modal__actions">
+          <button class="game-modal__play" type="button" data-modal-play>Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#games" class="nav__link">Games</a></li>
+          <li class="nav__item"><a href="#systems" class="nav__link">Systems</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span style="color: #f5a623; display: block; font-size: 10rem;">Wassim</span>
+          <span style="color: #ffffff; display: block; ffont-size: 6rem;">Ouled Mohamed</span>
+        </h1>
+        <p>I am a software developer with a strong background in video game development. I also document my technical problem-solving process and growth through content creation on YouTube.</p>
+        <div class="header__socials">
+          <a href="https://github.com/wassimcodes" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub">
+            <img src="./images/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/wassim-ouled-mohamed/" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn">
+            <img src="./images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://www.youtube.com/@IamWassim" target="_blank" rel="noreferrer" class="social-btn" aria-label="YouTube">
+            <img src="./images/youtube.png" alt="YouTube" />
+          </a>
+          <a href="https://x.com/iamwassim_" target="_blank" rel="noreferrer" class="social-btn" aria-label="X">
+            <img src="./images/x.png" alt="X" />
+          </a>
+          <a href="https://iamwassim.itch.io" target="_blank" rel="noreferrer" class="social-btn" aria-label="itch.io">
+            <img src="./images/itchio.png" alt="itch.io" />
+          </a>
+          <a href="https://www.instagram.com/iamwassimdev/" target="_blank" rel="noreferrer" class="social-btn" aria-label="Instagram">
+            <img src="./images/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@iamwassimdev" target="_blank" rel="noreferrer" class="social-btn" aria-label="TikTok">
+            <img src="./images/tiktok.png" alt="TikTok" />
+          </a>
+        </div>
+        <a href="mailto:wassimcontact@proton.me" class="btn btn--pink">Contact me</a>
+      </div>
+      <div class="header__photo">
+        <div class="photo-container">
+          <canvas id="particles-canvas"></canvas>
+          <img src="./images/my_picture.jpg" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; border: 4px solid #f5a623;" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Experience ***** -->
+    <section class="experience" id="experience">
+      <div class="row">
+        <h2>Experience</h2>
+        <div class="experience__timeline">
+
+          <div class="experience__item">
+            <div class="experience__logo-wrap">
+              <div class="experience__logo-circle">
+                <img src="./images/paralog_ai_logo.jfif" alt="Paralog logo" />
+              </div>
+            </div>
+            <div class="experience__body">
+              <span class="experience__date">Mar 2026 – May 2026</span>
+              <h3 class="experience__title">Tools &amp; Systems Intern</h3>
+              <span class="experience__org">Paralog</span>
+              <span class="experience__location">Montreal, QC</span>
+              <div class="experience__skills">
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Agile Methodologies</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Fork Client</span>
+                <span class="skill-tag">Plastic SCM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience__item">
+            <div class="experience__logo-wrap">
+              <div class="experience__logo-circle">
+                <img src="./images/migsmontreal_logo.jfif" alt="MIGS logo" />
+              </div>
+            </div>
+            <div class="experience__body">
+              <span class="experience__date">Nov 2025</span>
+              <h3 class="experience__title">Volunteering</h3>
+              <span class="experience__org">MIGS</span>
+              <span class="experience__location">Montreal, QC</span>
+            </div>
+          </div>
+
+          <div class="experience__item">
+            <div class="experience__logo-wrap">
+              <div class="experience__logo-circle">
+                <img src="./images/bdeb_logo.jfif" alt="Bois-de-Boulogne College logo" />
+              </div>
+            </div>
+            <div class="experience__body">
+              <span class="experience__date">Nov 2024 – May 2026</span>
+              <h3 class="experience__title">Video Game Programming</h3>
+              <span class="experience__org">Bois-de-Boulogne College</span>
+              <span class="experience__location">Montreal, QC</span>
+              <div class="experience__skills">
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Unreal Engine 5</span>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Perforce</span>
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">Game Programming Patterns</span>
+                <span class="skill-tag">Physics in Games</span>
+                <span class="skill-tag">Shaders</span>
+                <span class="skill-tag">Helix Plan</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience__item">
+            <div class="experience__logo-wrap">
+              <div class="experience__logo-circle">
+                <img src="./images/youtube_logo.png" alt="YouTube logo" />
+              </div>
+            </div>
+            <div class="experience__body">
+              <span class="experience__date">Oct 2023 – Present</span>
+              <h3 class="experience__title">Technical Content Creator</h3>
+              <span class="experience__org">YouTube</span>
+              <span class="experience__location">Montreal, QC</span>
+              <div class="experience__skills">
+                <span class="skill-tag">Social media marketing</span>
+                <span class="skill-tag">Adobe Premiere Pro</span>
+                <span class="skill-tag">Adobe Photoshop</span>
+                <span class="skill-tag">Adobe Audition</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience__item">
+            <div class="experience__logo-wrap">
+              <div class="experience__logo-circle">
+                <img src="./images/ahuntsic_logo.png" alt="Ahuntsic College logo" />
+              </div>
+            </div>
+            <div class="experience__body">
+              <span class="experience__date">Aug 2021 – May 2024</span>
+              <h3 class="experience__title">Pure and Applied Sciences</h3>
+              <span class="experience__org">Ahuntsic College</span>
+              <span class="experience__location">Montreal, QC</span>
+              <div class="experience__skills">
+                <span class="skill-tag">Linear algebra</span>
+                <span class="skill-tag">Calculus</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Physics</span>
+                <span class="skill-tag">Astronomy</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Games ***** -->
+    <section class="games" id="games">
+      <div class="row">
+        <h2>Games</h2>
+        <div class="games__filters">
+          <button class="games__filter-btn selected" data-filter="all">All</button>
+          <button class="games__filter-btn" data-filter="game-jams">Game Jams</button>
+          <button class="games__filter-btn" data-filter="school-projects">School Projects</button>
+          <button class="games__filter-btn" data-filter="short-games">Short Games</button>
+        </div>
+        <div class="games__grid">
+          <div class="game" data-category="game-jams" data-genre="Card Game" data-team-size="7" data-role="Game Programmer" data-tools="Unity, C#, Git" data-description="Defend yourself against the farmers by placing cards on the board to summon your heroes, summon creatures to block paths and slow the mob, and survive while protecting your home until dusk." data-devtime="42H" data-play-url="https://lord-baby69.itch.io/a-bad-hand">
+            <img src="./images/ABadHand_Cover.png" alt="A Bad Hand cover" class="game__cover" />
+            <div class="game__title">A Bad Hand</div>
+          </div>
+          <div class="game" data-category="game-jams" data-genre="Puzzle Game" data-team-size="1" data-role="Solo Developer" data-tools="C#, Unity, Blender, Substance Painter, Git" data-description="Play as Claire in her tiny, cozy workshop where friendly squirrels drop off boxes of broken objects. Your job is to fix each item and return it before time runs out." data-devtime="6 days" data-play-url="https://iamwassim.itch.io/claires-tiny-workshop">
+            <img src="./images/ClairesWorkshop_Cover.png" alt="Claire's Workshop cover" class="game__cover" />
+            <div class="game__title">Claire's Tiny Workshop</div>
+          </div>
+          <div class="game" data-category="short-games" data-genre="Narrative Exploration" data-team-size="1" data-role="Solo Developer" data-tools="Unity, C#, Blender, Substance Painter, Git" data-description="Glide through a child’s bedroom and discover a touching story by exploring and arranging special items around the room." data-devtime="2 months" data-play-url="https://iamwassim.itch.io/greg-the-glider">
+            <img src="./images/GregTheGlider_Cover.png" alt="Greg The Glider cover" class="game__cover" />
+            <div class="game__title">Greg the Glider</div>
+          </div>
+          <div class="game" data-category="game-jams" data-genre="Interactive Fiction" data-team-size="1" data-role="Solo Developer" data-tools="C#, Unity, Blender, Substance Painter, Git" data-description="It Goes On is a poetic, narrative-driven journey through memory, grief, and acceptance. You play as a daughter caring for her aging mother in a surreal hospital tower where time flows in loops. Each ascent of the staircase leads to a moment shared. As she relives these memories, the world slowly transforms, guiding you toward peace." data-devtime="4 days" data-play-url="https://iamwassim.itch.io/it-goes-on">
+            <img src="./images/ItGoesOn_Cover.png" alt="It Goes On cover" class="game__cover" />
+            <div class="game__title">It Goes On</div>
+          </div>
+          <div class="game" data-category="game-jams" data-genre="Strategy" data-team-size="7" data-role="Game Programmer" data-tools="C#, Unity, Git" data-description="Expand, build, and defend your base against the lurking anglerfish from the deep." data-devtime="46H" data-play-url="https://iamwassim.itch.io/kingdom-tiles">
+            <img src="./images/KingdomTiles_Cover.png" alt="Kingdom Tiles cover" class="game__cover" />
+            <div class="game__title">Kingdom Tiles</div>
+          </div>
+          <div class="game" data-category="school-projects" data-genre="Roguelike" data-team-size="1" data-role="Solo Developer" data-tools="Unity, C#, Git" data-description="You play as a mechanical spider built to protect Mars from waves of human colonizers. Rockets release enemies who try to claim the planet, and it’s your job to stop them. Use your weapon to fight back, and upgrade your abilities." data-devtime="1 Week" data-play-url="https://iamwassim.itch.io/mars-is-mine">
+            <img src="./images/MarsIsMine_Cover.png" alt="Mars Is Mine cover" class="game__cover" />
+            <div class="game__title">Mars is Mine</div>
+          </div>
+          <div class="game" data-category="game-jams" data-genre="Survival" data-team-size="6" data-role="Developer" data-tools="C#, Unity, Perforce, Blender" data-description="Gno-Home is a strategic Tower Defense game divided into two major phases: the Expedition and the Village. Your mission is to help the gnomes navigate hostile waters in search of a new home." data-devtime="3 months" data-play-url="https://iamwassim.itch.io/gno-home">
+            <img src="./images/Gnohome_Cover.png" alt="Gnohome cover" class="game__cover" />
+            <div class="game__title">Gno-Home</div>
+          </div>
+          <div class="game" data-category="game-jams" data-genre="Platformer" data-team-size="1" data-role="Solo Developer" data-tools="C#, Unity, Git" data-description="You play as Antonio, an Italian chef who’s turned into a rooftop delivery daredevil in the colorful skyline of Burano, Venice. Your mission is to deliver a pizza to an important client. The catch is that you’re riding a unicycle the whole way. Keep your balance, don’t fall, and most importantly, don't break anything." data-devtime="5 Days" data-play-url="https://iamwassim.itch.io/one-wheel-meal">
+            <img src="./images/OneWheelMeal_Cover.png" alt="One Wheel Meal cover" class="game__cover" />
+            <div class="game__title">One Wheel Meal</div>
+          </div>
+          <div class="game" data-category="short-games" data-genre="Cozy Management" data-team-size="1" data-role="Solo Developer" data-tools="C#, Unity, Blender, Substance Painter, Git" data-description="You are Jolly, a cheerful server, delivering drinks and keeping the café running smoothly (or, at least, trying to). But you’re not alone, Corky is with you, a barista with a lot to say." data-devtime="1 Month" data-play-url="https://iamwassim.itch.io/yappy-cafe">
+            <img src="./images/YappyCafe_Cover.png" alt="Yappy Cafe cover" class="game__cover" />
+            <div class="game__title">Yappy Cafe</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Systems ***** -->
+    <section class="systems" id="systems">
+      <div class="row">
+        <h2>Systems</h2>
+        <div class="systems__filters">
+          <button class="systems__filter-btn selected" data-filter="all">All</button>
+          <button class="systems__filter-btn" data-filter="unity">Unity</button>
+          <button class="systems__filter-btn" data-filter="unreal">Unreal Engine</button>
+          <button class="systems__filter-btn" data-filter="no-engine">No Engine</button>
+        </div>
+        <div class="systems__grid">
+          <div class="system" data-category="unreal" data-url="https://github.com/wassimcodes/top-down-controller-UE5">
+            <img src="./images/TopDownController_Cover.png" alt="Top Down Controller cover" class="system__cover" />
+            <div class="system__title">Top Down Controller</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">Unreal Engine 5</span>
+            </div>
+          </div>
+          <div class="system" data-category="unity" data-url="https://github.com/wassimcodes/Character-State-machine">
+            <img src="./images/FiniteStateMachine_Cover.png" alt="Finite State Machine cover" class="system__cover" />
+            <div class="system__title">Finite State Machine</div>
+            <div class="system__tags">
+              <span class="system__tag">C#</span>
+              <span class="system__tag">Unity</span>
+              <span class="system__tag">Inventory System</span>
+            </div>
+          </div>
+          <div class="system" data-category="unreal" data-url="https://github.com/wassimcodes/gantry-procedural-system">
+            <img src="./images/CraneSystem_Cover.png" alt="Crane System cover" class="system__cover" />
+            <div class="system__title">Procedural Crane System</div>
+            <div class="system__tags">
+              <span class="system__tag">Control Rig</span>
+              <span class="system__tag">Rigging</span>
+              <span class="system__tag">Physics Constraint</span>
+              <span class="system__tag">Cable Component</span>
+              <span class="system__tag">Unreal Engine</span>
+              <span class="system__tag">Blueprints</span>
+            </div>
+          </div>
+          <div class="system" data-category="unity" data-url="https://github.com/wassimcodes/RTS-navigation-system">
+            <img src="./images/RTSNavigationSystem.png" alt="RTS Navigation System cover" class="system__cover" />
+            <div class="system__title">RTS Navigation System</div>
+            <div class="system__tags">
+              <span class="system__tag">C#</span>
+              <span class="system__tag">Unity</span>
+              <span class="system__tag">Finite State Machine</span>
+            </div>
+          </div>
+          <div class="system" data-category="unity" data-url="https://github.com/wassimcodes/AI-patrol-tool-unity">
+            <img src="./images/AIPatrolTool_Cover.png" alt="AI Patrol Tool cover" class="system__cover" />
+            <div class="system__title">AI Patrol Tool</div>
+            <div class="system__tags">
+              <span class="system__tag">Tools</span>
+              <span class="system__tag">C#</span>
+              <span class="system__tag">Behaviour Tree</span>
+              <span class="system__tag">Unity</span>
+            </div>
+          </div>
+          <div class="system" data-category="unity" data-url="https://github.com/wassimcodes/AI-boids-simulation">
+            <img src="./images/BoidsSimulation_Cover.png" alt="Boids Simulation cover" class="system__cover" />
+            <div class="system__title">Boids Simulation</div>
+            <div class="system__tags">
+              <span class="system__tag">C#</span>
+              <span class="system__tag">Unity</span>
+              <span class="system__tag">Flocking Behaviour</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/drawing-software">
+            <img src="./images/DrawingSoftware_Cover.png" alt="Drawing Software cover" class="system__cover" />
+            <div class="system__title">Drawing Software</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">OpenGL</span>
+              <span class="system__tag">GLSL</span>
+              <span class="system__tag">IMGui</span>
+              <span class="system__tag">GLFW3</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/ecosystem-simulation">
+            <img src="./images/EcosystemSimulation_Cover.png" alt="Ecosystem Simulation cover" class="system__cover" />
+            <div class="system__title">Ecosystem Simulation</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">raylib</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/fluid-simulation-optimization">
+            <img src="./images/FluidSimulationOptimization_Cover.png" alt="Fluid Simulation Optimization cover" class="system__cover" />
+            <div class="system__title">Fluid Simulation Optimization</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">Visual Studio Profiler</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/geometry-dash-SDL2">
+            <img src="./images/geometrydash_Cover.png" alt="Geometry Dash cover" class="system__cover" />
+            <div class="system__title">Geometry Dash</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">SDL2</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/silver-clad-3D">
+            <img src="./images/RenderingEngine_Cover.png" alt="Rendering Engine cover" class="system__cover" />
+            <div class="system__title">3D Renderer</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">raylib</span>
+              <span class="system__tag">ECS</span>
+            </div>
+          </div>
+          <div class="system" data-category="no-engine" data-url="https://github.com/wassimcodes/vectors-ball-collision">
+            <img src="./images/VectorsCollisionAndSelection_Cover.png" alt="Vectors Collision and Selection cover" class="system__cover" />
+            <div class="system__title">Vectors Collision and Selection</div>
+            <div class="system__tags">
+              <span class="system__tag">C++</span>
+              <span class="system__tag">raylib</span>
+              <span class="system__tag">Linear Algebra</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+  <script>
+    const gameModal = document.getElementById('game-modal');
+    const gameModalBackdrop = gameModal.querySelector('.game-modal__backdrop');
+    const gameModalPanel = gameModal.querySelector('.game-modal__panel');
+    const gameModalCover = gameModal.querySelector('.game-modal__cover');
+    const gameModalContent = gameModal.querySelector('.game-modal__content');
+    const gameModalTitle = gameModal.querySelector('.game-modal__title');
+    const gameModalGenre = gameModal.querySelector('[data-modal-genre]');
+    const gameModalTeamSize = gameModal.querySelector('[data-modal-team-size]');
+    const gameModalTools = gameModal.querySelector('[data-modal-tools]');
+    const gameModalDescription = gameModal.querySelector('[data-modal-description]');
+    const gameModalActions = gameModal.querySelector('.game-modal__actions');
+    const gameModalPlay = gameModal.querySelector('[data-modal-play]');
+    const gameCards = document.querySelectorAll('.games .game');
+    const gameModalLabels = gameModal.querySelectorAll('.game-modal__label');
+
+    const syncModalClosed = () => {
+      gameModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('game-modal-open');
+      gameModal.style.display = 'none';
+      gameModal.style.opacity = '0';
+      gameModal.style.pointerEvents = 'none';
+    };
+
+    const closeModal = () => {
+      gameModal.style.opacity = '0';
+      gameModal.style.pointerEvents = 'none';
+      gameModalPanel.style.transform = 'scale(0.95)';
+      gameModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('game-modal-open');
+      setTimeout(() => { gameModal.style.display = 'none'; }, 300);
+    };
+
+    syncModalClosed();
+
+    const openModal = (card) => {
+      const title = card.querySelector('.game__title')?.textContent.trim() || '';
+      const image = card.querySelector('.game__cover');
+      const genre = card.getAttribute('data-genre') || 'Unknown';
+      const teamSize = card.getAttribute('data-team-size') || 'Unknown';
+      const tools = card.getAttribute('data-tools') || 'Unknown';
+      const description = card.getAttribute('data-description') || '';
+      const playUrl = card.getAttribute('data-play-url') || '';
+      const role = card.getAttribute('data-role') || 'Unknown';
+      const devTime = card.getAttribute('data-devtime') || 'Unknown';
+
+      gameModalCover.src = image?.src || '';
+      gameModalCover.alt = image?.alt || title;
+      Object.assign(gameModalCover.style, {
+        width: '72%',
+        maxWidth: '420px',
+        maxHeight: '34vh',
+        objectFit: 'contain',
+        display: 'block',
+        margin: '0 auto'
+      });
+      Object.assign(gameModalContent.style, {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        textAlign: 'left',
+        width: '100%',
+        gap: '1rem'
+      });
+      gameModalTitle.textContent = title;
+      Object.assign(gameModalTitle.style, {
+        width: '100%',
+        textAlign: 'center',
+        margin: '0'
+      });
+      gameModalGenre.textContent = genre;
+      gameModalTeamSize.textContent = teamSize;
+      if (gameModal.querySelector('[data-modal-role]')) {
+        gameModal.querySelector('[data-modal-role]').textContent = role;
+      }
+      if (gameModal.querySelector('[data-modal-devtime]')) {
+        gameModal.querySelector('[data-modal-devtime]').textContent = devTime;
+      }
+      gameModalTools.textContent = tools;
+      gameModalDescription.textContent = description;
+      gameModalLabels.forEach(label => {
+        Object.assign(label.style, {
+          color: '#fff',
+          fontWeight: '700'
+        });
+      });
+      [gameModalGenre, gameModalTeamSize, gameModalTools, gameModalDescription].forEach(element => {
+        Object.assign(element.style, {
+          color: '#fff',
+          fontWeight: '400'
+        });
+      });
+      gameModalPlay.textContent = 'Game Page';
+      gameModalPlay.disabled = !playUrl || playUrl === '#';
+      gameModalPlay.setAttribute('aria-disabled', playUrl && playUrl !== '#' ? 'false' : 'true');
+      gameModalPlay.classList.toggle('is-disabled', !playUrl || playUrl === '#');
+      Object.assign(gameModalActions.style, {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: '0.5rem'
+      });
+      Object.assign(gameModalPlay.style, {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minWidth: '140px',
+        height: '48px',
+        margin: '0',
+        alignSelf: 'center',
+        backgroundColor: 'transparent',
+        border: '2px solid #f5a623',
+        borderRadius: '8px',
+        padding: '0 2rem',
+        textDecoration: 'none',
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: '1.6rem',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'color 0.2s',
+        cursor: 'pointer',
+        zIndex: 1
+      });
+      // Remove any previous fill effect
+      if (gameModalPlay.querySelector('.btn-fill')) {
+        gameModalPlay.removeChild(gameModalPlay.querySelector('.btn-fill'));
+      }
+      // Add fill effect element
+      const fill = document.createElement('span');
+      fill.className = 'btn-fill';
+      Object.assign(fill.style, {
+        position: 'absolute',
+        left: 0,
+        bottom: 0,
+        width: '100%',
+        height: '0%',
+        background: '#f5a623',
+        zIndex: 0,
+        transition: 'height 0.35s cubic-bezier(0.4,0,0.2,1)',
+        borderRadius: '0 0 8px 8px',
+        pointerEvents: 'none',
+      });
+      // Wrap the text in a span for layering
+      let textSpan = gameModalPlay.querySelector('.btn-text');
+      if (!textSpan) {
+        textSpan = document.createElement('span');
+        textSpan.className = 'btn-text';
+        textSpan.textContent = 'Game Page';
+        Object.assign(textSpan.style, {
+          position: 'relative',
+          zIndex: 1,
+          transition: 'color 0.2s',
+        });
+        // Remove any direct text node
+        gameModalPlay.textContent = '';
+        gameModalPlay.appendChild(textSpan);
+      }
+      gameModalPlay.appendChild(fill);
+      gameModalPlay.onmouseenter = () => {
+        fill.style.height = '100%';
+        textSpan.style.color = '#111';
+      };
+      gameModalPlay.onmouseleave = () => {
+        fill.style.height = '0%';
+        textSpan.style.color = '#fff';
+      };
+      gameModalPlay.onclick = playUrl && playUrl !== '#'
+        ? () => window.open(playUrl, '_blank', 'noreferrer')
+        : null;
+
+      gameModalPlay.onclick = playUrl && playUrl !== '#'
+        ? () => window.open(playUrl, '_blank', 'noreferrer')
+        : null;
+
+      Object.assign(gameModal.style, {
+        position: 'fixed',
+        inset: '0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '2.4rem',
+        zIndex: '9999',
+        opacity: '0',
+        transition: 'opacity 0.3s ease',
+        pointerEvents: 'auto'
+      });
+
+      Object.assign(gameModalBackdrop.style, {
+        position: 'absolute',
+        inset: '0',
+        background: 'rgba(7, 10, 20, 0.45)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)'
+      });
+
+      Object.assign(gameModalPanel.style, {
+        position: 'relative',
+        width: '760px',
+        maxWidth: '92vw',
+        maxHeight: '90vh',
+        overflow: 'auto',
+        background: 'rgba(15, 18, 34, 0.96)',
+        border: '1px solid rgba(255, 255, 255, 0.12)',
+        borderRadius: '2.4rem',
+        boxShadow: '0 24px 80px rgba(0, 0, 0, 0.45)',
+        padding: '2rem',
+        display: 'grid',
+        gap: '1.5rem',
+        transform: 'scale(0.95)',
+        transition: 'transform 0.3s ease'
+      });
+
+      gameModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('game-modal-open');
+
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        gameModal.style.opacity = '1';
+        gameModalPanel.style.transform = 'scale(1)';
+      }));
+    };
+
+    gameCards.forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    gameModal.querySelectorAll('[data-modal-close]').forEach(element => {
+      element.addEventListener('click', closeModal);
+    });
+
+    gameModal.addEventListener('click', (event) => {
+      if (event.target === gameModal) {
+        closeModal();
+      }
+    });
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && gameModal.getAttribute('aria-hidden') === 'false') {
+        closeModal();
+      }
+    });
+
+    document.querySelectorAll('.games__filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.games__filter-btn').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.games .game').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.querySelectorAll('.systems__filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.systems__filter-btn').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.systems .system').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Add click event to system cards for GitHub links
+    document.querySelectorAll('.systems__grid .system').forEach(card => {
+      const url = card.getAttribute('data-url');
+      if (url) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', e => {
+          window.open(url, '_blank', 'noreferrer');
+        });
+      }
+    });
+    // Particles around profile photo
+    (function () {
+      const canvas = document.getElementById('particles-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const SIZE = 520;
+      canvas.width = SIZE;
+      canvas.height = SIZE;
+      const cx = SIZE / 2, cy = SIZE / 2;
+      const innerR = 162, outerR = 255;
+      const N = 70;
+
+      const particles = Array.from({ length: N }, () => ({
+        angle: Math.random() * Math.PI * 2,
+        dist: innerR + Math.random() * (outerR - innerR),
+        speed: (Math.random() * 0.004 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
+        wobbleOffset: Math.random() * Math.PI * 2,
+        wobbleSpeed: Math.random() * 0.018 + 0.004,
+        wobbleAmp: Math.random() * 12 + 4,
+      }));
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function frame() {
+        ctx.clearRect(0, 0, SIZE, SIZE);
+        for (const p of particles) {
+          p.angle += p.speed;
+          p.wobbleOffset += p.wobbleSpeed;
+          const d = p.dist + Math.sin(p.wobbleOffset) * p.wobbleAmp;
+          const t = 1 - Math.max(0, Math.min(1, (d - innerR) / (outerR - innerR)));
+          const x = cx + Math.cos(p.angle) * d;
+          const y = cy + Math.sin(p.angle) * d;
+          const size = lerp(1.2, 3.2, t);
+          const alpha = lerp(0.07, 0.92, t);
+          const r = Math.round(lerp(240, 245, t));
+          const g = Math.round(lerp(233, 166, t));
+          const b = Math.round(lerp(242, 35, t));
+          ctx.beginPath();
+          ctx.arc(x, y, size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+          ctx.fill();
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+
+</html>
